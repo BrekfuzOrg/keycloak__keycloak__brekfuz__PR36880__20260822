@@ -263,8 +263,8 @@ importers:
         specifier: ^14.0.2
         version: 14.0.2
       cypress-axe:
-        specifier: ^1.6.0
-        version: 1.6.0(axe-core@4.10.2)(cypress@14.0.2)
+        specifier: ^1.7.0
+        version: 1.7.0(axe-core@4.10.2)(cypress@14.0.2)
       cypress-split:
         specifier: ^1.24.10
         version: 1.24.10(@babel/core@7.26.7)
@@ -1087,6 +1087,7 @@ packages:
   '@faker-js/faker@9.4.0':
     resolution: {integrity: sha512-85+k0AxaZSTowL0gXp8zYWDIrWclTbRPg/pm/V0dSFZ6W6D4lhcG3uuZl4zLsEKfEvs69xDbLN2cHQudwp95JA==}
     engines: {node: '>=18.0.0', npm: '>=9.0.0'}
+    deprecated: Please update to a newer version
 
   '@fastify/busboy@2.1.1':
     resolution: {integrity: sha512-vBZP4NlzfOlerQTnba4aqZoMhE/a9HY7HRqoOPaETQcSQuWEIyZMHGfVu6w9wGtGK5fED5qRs2DteVCjOH60sA==}
@@ -1938,6 +1939,7 @@ packages:
 
   '@ungap/structured-clone@1.2.0':
     resolution: {integrity: sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==}
+    deprecated: Potential CWE-502 - Update to 1.3.1 or higher
 
   '@vitejs/plugin-react-swc@3.8.0':
     resolution: {integrity: sha512-T4sHPvS+DIqDP51ifPqa9XIRAz/kIvIi8oXcnOZZgHmMotgmmdxe/DD5tMFlt5nuIRzT0/QuiwmKlH0503Aapw==}
@@ -2257,6 +2259,7 @@ packages:
   bootstrap@3.4.1:
     resolution: {integrity: sha512-yN5oZVmRCwe5aKwzRj6736nSmKDX7pLYwsXiCj/EYmo16hODaBiT4En5btW/jhBF/seV+XMx3aYwukYC3A49DA==}
     engines: {node: '>=6'}
+    deprecated: This version of Bootstrap is no longer supported. Please upgrade to the latest version.
 
   brace-expansion@1.1.11:
     resolution: {integrity: sha512-iCuPHDFgrHX7H2vEI/5xpz07zSHB00TpugqhmYtVmMO6518mCuRMoOYFldEBl0g187ufozdaHgWKcYFb61qGiA==}
@@ -2497,12 +2500,12 @@ packages:
   csstype@3.1.3:
     resolution: {integrity: sha512-M1uQkMl8rQK/szD0LNhtqxIPLpimGm8sOBwU7lLnCpSbTyY3yeU1Vc7l4KT5zT4s/yOxHH5O7tIuuLOCnLADRw==}
 
-  cypress-axe@1.6.0:
-    resolution: {integrity: sha512-C/ij50G8eebBrl/WsGT7E+T/SFyIsRZ3Epx9cRTLrPL9Y1GcxlQGFoAVdtSFWRrHSCWXq9HC6iJQMaI89O9yvQ==}
+  cypress-axe@1.7.0:
+    resolution: {integrity: sha512-zzJpvAAjauEB3GZl0KYXb8i3w6MztWAt2WM3czYTFyNVC30alDmqCm9E7GwZ4bgkldZJlmHakaVEyu73R5St4w==}
     engines: {node: '>=10'}
     peerDependencies:
       axe-core: ^3 || ^4
-      cypress: ^10 || ^11 || ^12 || ^13 || ^14
+      cypress: ^10 || ^11 || ^12 || ^13 || ^14 || ^15
 
   cypress-split@1.24.10:
     resolution: {integrity: sha512-8OPOWmOznR/+0sczoKnfDvLYN19u5jnbHYHBLI56ay55OE8WRSSJ64V8Lp/zTY+2+vGuLoplR1vyiApKGKFTPA==}
@@ -2938,6 +2941,7 @@ packages:
   eslint@9.20.0:
     resolution: {integrity: sha512-aL4F8167Hg4IvsW89ejnpTwx+B/UQRzJPGgbIOl+4XqffWsahVVsLEWoZvnrVuwpWmnRd7XeXmQI1zlKcFDteA==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+    deprecated: This version is no longer supported. Please see https://eslint.org/version-support for other options.
     hasBin: true
     peerDependencies:
       jiti: '*'
@@ -3240,11 +3244,12 @@ packages:
 
   glob@10.4.5:
     resolution: {integrity: sha512-7Bv8RF0k6xjo7d4A/PxYLbUCfb6c+Vpd2/mB2yRDlew7Jb5hEXiCD9ibfO7wpk8i4sevK6DFny9h7EYbM3/sHg==}
+    deprecated: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
     hasBin: true
 
   glob@7.2.3:
     resolution: {integrity: sha512-nFR0zLpU2YCaRxwoCJvL6UvCH2JFyFVIvwTLsIf21AuHlMskA1hhTdk+LlYJtOlYt9v6dvszD2BGRqBL+iQK9Q==}
-    deprecated: Glob versions prior to v9 are no longer supported
+    deprecated: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
 
   global-dirs@3.0.1:
     resolution: {integrity: sha512-NBcGGFbBA9s1VzD41QXDG+3++t9Mn5t1FpLdhESY6oKY4gYTFpX4wO3sqGUa0Srjtbfj3szX0RnemmrVRUdULA==}
@@ -3679,6 +3684,7 @@ packages:
 
   jquery@3.4.1:
     resolution: {integrity: sha512-36+AdBzCL+y6qjw5Tx7HgzeGCzC81MDDgaUP8ld2zhx58HdqXGoBd+tHdrBMiyjGQs0Hxs/MLZTu/eHNJJuWPw==}
+    deprecated: This version is deprecated. Please upgrade to the latest version or find support at https://www.herodevs.com/support/jquery-nes.
 
   js-tokens@4.0.0:
     resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==}
@@ -5114,6 +5120,7 @@ packages:
 
   uuid@8.3.2:
     resolution: {integrity: sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==}
+    deprecated: uuid@10 and below is no longer supported.  For ESM codebases, update to uuid@latest.  For CommonJS codebases, use uuid@11 (but be aware this version will likely be deprecated in 2028).
     hasBin: true
 
   v8-compile-cache-lib@3.0.1:
@@ -5309,6 +5316,7 @@ packages:
   whatwg-encoding@3.1.1:
     resolution: {integrity: sha512-6qN4hJdMwfYBtE3YBTTHhoeuUrDBPZmbQaxWAqSALV/MeEnR5z1xd8UKud2RAkFoPkmB+hli1TZSnyi84xz1vQ==}
     engines: {node: '>=18'}
+    deprecated: Use @exodus/bytes instead for a more spec-conformant and faster implementation
 
   whatwg-mimetype@4.0.0:
     resolution: {integrity: sha512-QaKxh0eNIi2mE9p2vEdzfagOKHCcj1pJ56EEHGQOVxp8r9/iszLUUV7v89x9O1p/T+NlTM5W7jW6+cz4Fq1YVg==}
@@ -7490,7 +7498,7 @@ snapshots:
 
   csstype@3.1.3: {}
 
-  cypress-axe@1.6.0(axe-core@4.10.2)(cypress@14.0.2):
+  cypress-axe@1.7.0(axe-core@4.10.2)(cypress@14.0.2):
     dependencies:
       axe-core: 4.10.2
       cypress: 14.0.2
