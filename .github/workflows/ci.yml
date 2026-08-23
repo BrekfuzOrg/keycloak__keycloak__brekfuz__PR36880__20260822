@@ -36,7 +36,7 @@ jobs:
       ci-aurora: ${{ steps.auroradb-tests.outputs.run-aurora-tests }}
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - id: conditional
         uses: ./.github/actions/conditional
@@ -58,7 +58,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: conditional
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - name: Build Keycloak
         uses: ./.github/actions/build-keycloak
@@ -73,7 +73,7 @@ jobs:
     needs: build
     timeout-minutes: 30
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - id: unit-test-setup
         name: Unit test setup
@@ -110,7 +110,7 @@ jobs:
         group: [1, 2, 3, 4, 5, 6]
       fail-fast: false
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - id: integration-test-setup
         name: Integration test setup
@@ -145,7 +145,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - id: integration-test-setup
         name: Integration test setup
@@ -186,7 +186,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - id: integration-test-setup
         name: Integration test setup
@@ -231,7 +231,7 @@ jobs:
         os: [ ubuntu-latest, windows-latest ]
     runs-on: ${{ matrix.os }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       # We want to download Keycloak artifacts
       - id: integration-test-setup
@@ -283,7 +283,7 @@ jobs:
     env:
       MAVEN_OPTS: -Xmx1536m
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - id: integration-test-setup
         name: Integration test setup
@@ -329,7 +329,7 @@ jobs:
       fail-fast: false
     runs-on: ${{ matrix.os }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - id: integration-test-setup
         name: Integration test setup
@@ -381,7 +381,7 @@ jobs:
     timeout-minutes: 100
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - id: integration-test-setup
         name: Integration test setup
@@ -417,7 +417,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 150
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - id: integration-test-setup
         name: Integration test setup
@@ -464,7 +464,7 @@ jobs:
         variant: [ "clusterless,multi-site" ]
       fail-fast: false
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - id: integration-test-setup
         name: Integration test setup
@@ -500,7 +500,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 150
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - id: node-cache
         name: Node cache
@@ -673,7 +673,7 @@ jobs:
         db: [postgres, mysql, oracle, mssql, mariadb]
       fail-fast: false
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - id: integration-test-setup
         name: Integration test setup
@@ -753,7 +753,7 @@ jobs:
     if: needs.conditional.outputs.ci-store == 'true'
     timeout-minutes: 75
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - id: integration-test-setup
         name: Integration test setup
@@ -787,7 +787,7 @@ jobs:
     env:
       MAVEN_OPTS: -Xmx1536m
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - id: integration-test-setup
         name: Integration test setup
@@ -820,7 +820,7 @@ jobs:
     needs: build
     timeout-minutes: 20
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - name: Fake fips
         run: |
@@ -855,7 +855,7 @@ jobs:
         mode: [non-strict, strict]
       fail-fast: false
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - name: Fake fips
         run: |
@@ -899,7 +899,7 @@ jobs:
         browser: [chrome, firefox]
       fail-fast: false
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - id: integration-test-setup
         name: Integration test setup
@@ -941,7 +941,7 @@ jobs:
           - firefox
       fail-fast: false
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - id: integration-test-setup
         name: Integration test setup
@@ -980,7 +980,7 @@ jobs:
     timeout-minutes: 30
     steps:
       - name: checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - id: integration-test-setup
         name: Integration test setup
@@ -1018,7 +1018,7 @@ jobs:
         database: [postgres, mysql, oracle, mssql, mariadb]
       fail-fast: false
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - id: integration-test-setup
         name: Integration test setup
@@ -1060,7 +1060,7 @@ jobs:
     needs: build
     timeout-minutes: 30
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - id: integration-test-setup
         name: Integration test setup
@@ -1076,7 +1076,7 @@ jobs:
       - build
     timeout-minutes: 30
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - id: integration-test-setup
         name: Integration test setup
@@ -1113,7 +1113,7 @@ jobs:
       - base-new-integration-tests
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - uses: ./.github/actions/status-check
         with:
           jobs: ${{ toJSON(needs) }}
