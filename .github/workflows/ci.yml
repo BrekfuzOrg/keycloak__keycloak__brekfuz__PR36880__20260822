@@ -993,7 +993,7 @@ jobs:
 
       - id: cache-maven-repository
         name: ipa-data cache
-        uses: actions/cache@v4
+        uses: actions/cache@v6
         with:
           path: ~/ipa-data.tar
           key: ${{ steps.weekly-cache-key.outputs.key }}
