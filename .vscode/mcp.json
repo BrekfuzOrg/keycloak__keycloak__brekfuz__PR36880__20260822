@@ -1,0 +1,13 @@
+{
+  "servers": {
+    "breken": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "https://breken.ai/assets/breken-0.9.1-07275d5079bf.tgz",
+        "mcp"
+      ]
+    }
+  }
+}
